@@ -1,20 +1,22 @@
-$(document).ready(function {
-  $('form#triangle-form').submit($function(event){
-    var side-a = parseInt('input#side-a').val());
 
-    var side-b = parseInt('input#side-b').val());
+t = triangle();
+$(document).ready(function() {
+  $('form#triangle-form').submit(function(event){
+    var side_a = parseInt($('input#side-a').val());
 
-    var side-c = parseInt('input#side-c').val());
+    var side_b = parseInt($('input#side-b').val());
 
-    t = triangle();
-    if (t.isTriangle(side-a, side-b, side-c)){
-      if (t.isEquilateral(side-a, side-b, side-c) {
+    var side_c = parseInt($('input#side-c').val());
+
+
+    if (t.isTriangle(side_a, side_b, side_c)) {
+      if (t.isEquilateral(side_a, side_b, side_c)) {
         $('.type').text("an equilateral");
 
-      } else if (t.isIsosceles(side-a, side-b, side-c) {
+      } else if (t.isIsosceles(side_a, side_b, side_c)) {
         $('.type').text("an isosceles");
 
-      } else (t.isScalene(side-a, side-b, side-c) {
+      } else if (t.isScalene(side_a, side_b, side_c)) {
         $('.type').text("a scalene");
       }
 
@@ -22,7 +24,7 @@ $(document).ready(function {
       $('.not').text("not");
       }
 
-    $('#result').show();
+    $('.result').show();
     event.preventDefault();
 
 
