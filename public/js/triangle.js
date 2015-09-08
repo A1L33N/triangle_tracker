@@ -1,7 +1,7 @@
-var triangle = function() {
+var triangle = function(side_a, side_b, side_c) {
   var isTriangle, isEquilateral, isIsosceles, isScalene;
 
-  isTriangle = function(side_a, side_b, side_c) {
+  isTriangle = function() {
     if (( side_c <= side_a + side_b)  &&  ( side_a <= side_c + side_b ) && ( side_b <= side_a + side_c )) {
       return true;
     }
@@ -11,7 +11,7 @@ var triangle = function() {
 
   };
 
-  isEquilateral = function(side_a, side_b, side_c) {
+  isEquilateral = function() {
     if ((side_a === side_b) && (side_a === side_c) && (side_c === side_b)) {
       return true;
 
@@ -20,7 +20,7 @@ var triangle = function() {
     }
   };
 
-  isIsosceles = function(side_a, side_b, side_c) {
+  isIsosceles = function() {
     if (((side_a === side_b) || (side_b === side_c) || (side_a === side_c))  && !isEquilateral(side_a, side_b, side_c)) {
       return true;
     }
@@ -29,7 +29,7 @@ var triangle = function() {
     }
   };
 
-  isScalene = function(side_a, side_b, side_c) {
+  isScalene = function() {
     if (((side_a != side_b) && (side_a != side_c) && (side_b != side_c)) && isTriangle(side_a, side_b, side_c)) {
       return true;
     } else {
@@ -45,6 +45,7 @@ var triangle = function() {
             isScalene: isScalene };
 
 };
+
 
 
 
