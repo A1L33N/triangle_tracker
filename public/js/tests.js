@@ -32,13 +32,23 @@ var triangle = function() {
     }
   };
 
+  isScalene = function(side_a, side_b, side_c) {
+    if ((side_a != side_b) && (side_a != side_c) && (side_b != side_c) && isTriangle(side_a, side_b, side_c)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 
    return { isTriangle: isTriangle,
             isEquilateral: isEquilateral,
-            isIsosceles: isIsosceles };
+            isIsosceles: isIsosceles,
+            isScalene: isScalene};
 
 };
+
 
 
 
@@ -71,6 +81,16 @@ describe('triangle', function(){
   it('returns false if a triangle is not isosceles', function() {
     a = triangle();
     expect(a.isIsosceles(2, 2, 2)).to.equal(false);
+  });
+
+  it('returns true if a triangle is scalene', function() {
+    a = triangle();
+    expect(a.isScalene(2, 3, 4)).to.equal(true);
+  });
+
+  it('returns false if a triangle is not scalene', function() {
+    a = triangle();
+    expect(a.isScalene(2, 3, 11)).to.equal(false);
   });
 
 });

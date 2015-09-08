@@ -29,10 +29,19 @@ var triangle = function() {
     }
   };
 
+  isScalene = function(side_a, side_b, side_c) {
+    if (((side_a != side_b) && (side_a != side_c) && (side_b != side_c)) && isTriangle(side_a, side_b, side_c)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 
    return { isTriangle: isTriangle,
             isEquilateral: isEquilateral,
-            isIsosceles: isIsosceles };
+            isIsosceles: isIsosceles,
+            isScalene: isScalene};
 
 };
