@@ -1,1 +1,33 @@
-test
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Triangle Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/triangle.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Triangle Tracker</h1>
+      <form id="triangle-form">
+        <div class="form-group">
+          <label for="side-a">Enter side a</label>
+          <input type="text" name="side-a" id="side-a">
+          <label for="side-b">Enter side b</label>
+          <input type="text" name="side-b" id="side-b">
+          <label for="side-c">Enter side c</label>
+          <input type="text" name="side-c" id="side-c">
+        </div>
+        <button type="submit" class="btn">Find Out</button>
+      </form>
+
+      <div class="result">
+        <p>It is <span class="not"></span> a <span class="type"></span> triangle.</p>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
